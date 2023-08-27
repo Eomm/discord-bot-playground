@@ -1,15 +1,22 @@
 {
-  "$schema": "https://platformatic.dev/schemas/v0.37.0/db",
+  "$schema": "https://platformatic.dev/schemas/v0.37.0/service",
   "server": {
     "hostname": "{PLT_SERVER_HOSTNAME}",
     "port": "{PORT}",
     "logger": {
       "level": "{PLT_SERVER_LOGGER_LEVEL}"
+    },
+    "cors": {
+      "origin": "{PLT_CORS_ORIGIN}",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ]
     }
   },
-  "db": {
-    "connectionString": "{DATABASE_URL}",
-    "graphql": true,
+  "service": {
     "openapi": true
   },
   "watch": {
@@ -18,16 +25,10 @@
       "*.sqlite-journal"
     ]
   },
-  "migrations": {
-    "dir": "migrations",
-    "autoApply": true
-  },
   "plugins": {
     "paths": [
-      "plugin.js"
+      "./plugins"
     ]
   },
-  "types": {
-    "autogenerate": true
-  }
+  "clients": []
 }

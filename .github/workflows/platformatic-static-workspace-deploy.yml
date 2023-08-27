@@ -12,12 +12,18 @@ jobs:
     permissions:
       contents: read
     runs-on: ubuntu-latest
+    environment:
+      name: production
     env:
-     DATABASE_URL: ${{ secrets.DATABASE_URL }}
-     PLT_SERVER_LOGGER_LEVEL: info 
-     PORT: 3001 
-     PLT_SERVER_HOSTNAME: 127.0.0.1 
-     DEPLOY_SERVICE_HOST: https://plt-production-deploy-service.fly.dev 
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      PLT_SERVER_LOGGER_LEVEL: info 
+      PORT: 3001 
+      PLT_SERVER_HOSTNAME: 127.0.0.1 
+      PLT_CORS_ORIGIN: https://platformatic.cloud
+      DEPLOY_SERVICE_HOST: https://plt-production-deploy-service.fly.dev 
+      DISCORD_APP_ID: ${{ secrets.DISCORD_APP_ID }}
+      DISCORD_PUBLIC_KEY: ${{ secrets.DISCORD_PUBLIC_KEY }}
+      DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
 
     steps:
       - name: Checkout application project repository
@@ -30,4 +36,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           platformatic_workspace_id: ${{ secrets.PLATFORMATIC_STATIC_WORKSPACE_ID }}
           platformatic_workspace_key: ${{ secrets.PLATFORMATIC_STATIC_WORKSPACE_API_KEY }}
-          platformatic_config_path: ./platformatic.db.json
+          platformatic_config_path: ./platformatic.service.json
