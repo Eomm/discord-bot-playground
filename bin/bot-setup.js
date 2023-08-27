@@ -10,7 +10,7 @@ dotenv.config()
  */
 async function main () {
   console.log('Setting up bot commands...')
-  const { DISCORD_TOKEN, DISCORD_APP_ID } = process.env
+  const { PLT_DISCORD_TOKEN, DISCORD_APP_ID } = process.env
 
   const commands = [
     {
@@ -19,7 +19,7 @@ async function main () {
     }
   ]
 
-  const rest = new REST({ version: '10' }).setToken(DISCORD_TOKEN)
+  const rest = new REST({ version: '10' }).setToken(PLT_DISCORD_TOKEN)
 
   try {
     console.log('Started refreshing application (/) commands.')

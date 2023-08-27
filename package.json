@@ -4,7 +4,7 @@
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "start": "platformatic start --allow-env PORT,DISCORD_TOKEN"
+    "start": "platformatic start --allow-env PORT,PLT_DISCORD_TOKEN"
   },
   "devDependencies": {
     "fastify": "^4.21.0",

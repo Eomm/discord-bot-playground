@@ -10,9 +10,9 @@ module.exports = fp(async function envSchema (app) {
     dotenv: true,
     schema: {
       type: 'object',
-      required: ['DISCORD_TOKEN'],
+      required: ['PLT_DISCORD_TOKEN'],
       properties: {
-        DISCORD_TOKEN: { type: 'string' }
+        PLT_DISCORD_TOKEN: { type: 'string' }
       }
     }
   })

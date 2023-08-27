@@ -9,7 +9,7 @@ module.exports = fp(async function discordBot (fastify, opts) {
   const bot = buildDiscordBot({
     logger: fastify.log,
     auth: {
-      token: fastify.appConfig.DISCORD_TOKEN
+      token: fastify.appConfig.PLT_DISCORD_TOKEN
     }
   })
 

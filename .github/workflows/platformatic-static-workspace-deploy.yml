@@ -23,7 +23,7 @@ jobs:
       DEPLOY_SERVICE_HOST: https://plt-production-deploy-service.fly.dev 
       DISCORD_APP_ID: ${{ secrets.DISCORD_APP_ID }}
       DISCORD_PUBLIC_KEY: ${{ secrets.DISCORD_PUBLIC_KEY }}
-      DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+      PLT_DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
 
     steps:
       - name: Checkout application project repository
