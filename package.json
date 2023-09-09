@@ -13,6 +13,7 @@
   "dependencies": {
     "@fastify/env": "^4.2.0",
     "discord.js": "^14.13.0",
+    "fastify-invincible": "^0.1.0",
     "fastify-plugin": "^4.5.1",
     "platformatic": "^0.37.0"
   },
