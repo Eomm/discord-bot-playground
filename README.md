@@ -5,12 +5,14 @@ It does nothing, it's just a playground.
 
 ## Commands
 
-TODO
+- `/ping`: replies with `pong!`
 
 
 ## Architecture
 
 - It is deployed on [Platformatic](https://platformatic.cloud/).
+
+![Architecture](./docs/architecture.png)
 
 
 ## Development
